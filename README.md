@@ -41,7 +41,7 @@ const birth; // 초기화 선언 하지않으면 오류 초기화 반드시
 birth = "1997. 11. 21"; // 변경 불가능 오류
 ```
 
-#### 네이밍 규칙/변수 명명규칙
+#### 3) 네이밍 규칙/변수 명명규칙
 
 1. $, \_ 제외한 기호는 사용 할 수 없다.
 2. 숫자로 시작할 수 없다.
@@ -94,7 +94,7 @@ let empty = null;
 
 ##### e. undefined
 
-- 값이 할당 안된 상태
+- 값이 할당 안된 상태
 
 ```javascript
 let empty;
@@ -156,7 +156,7 @@ console.log(numToStr1 + "입니다."); // 20입니다.
 
 ### 4. 연산자(Operator)란?
 
-프로그래밍에서의 다양한 연산을 위한 기호, 키워드
+- 프로그래밍에서의 다양한 연산을 위한 기호, 키워드
 
 #### 1) 대입 연산자 : ex) let var1 = 1; 에서 =이 대입연산자
 
@@ -283,4 +283,67 @@ let var9 = 10;
 // 요구사항 : 변수 res에 var9의 값이 짝수-> "짝", 홀수-> "홀"
 let res = var9 % 2 === 0 ? "짝수" : "홀수";
 console.log(res); // 짝수
+```
+
+### 5. 조건문(Conditional Statement)이란?
+
+특정 조건을 만족했을 때에만 실행되는 코드를 작성하기 위한 문법
+대표적으로 if, switch 조건문
+
+#### 1) if
+
+```javascript
+let num = 10;
+if (num >= 10) {
+  // 조건이 참
+  console.log("num은 10 이상입니다.");
+  console.log("조건이 참 입니다!");
+} else if (num >= 5) {
+  // 첫번째 조건이 만족되지 않을 때
+  // else if는 갯수 제한이 없음
+  console.log("num은 3이상 입니다.");
+} else if (num >= 3) {
+  console.log("num은 3 이상입니다.");
+} else {
+  // 조건 거짓  else: 그렇지 않으면
+  console.log("조건이 거짓입니다!");
+}
+```
+
+#### 2) switch
+
+- if문과 기능 자체는 동일
+- 다수의 조건을 처리할 때 if보다 더 직관적
+
+```javascript
+let animal = "cat"; // 어떠한
+
+switch (
+  animal // animal 변수 조건과 맞는 case를 위에서 부터 아래로 쭉 내려오며 비교함 그래서 모든 코드 수행되어 모든 콘솔 다 실행
+) {
+  case "cat": {
+    console.log("고양이");
+    break; // 조건이 되면 switch문 종료
+  }
+  case "dog": {
+    console.log("강아지");
+    break;
+  }
+  case "bear": {
+    console.log("곰");
+    break;
+  }
+  case "snake": {
+    console.log("뱀");
+    break;
+  }
+  case "tiger": {
+    console.log("호랑이");
+    break;
+  }
+  default: {
+    // 모든 조건에 일치하는 case가 없을 때 (if문의 else 같은 기능)
+    console.log("그런 동물은 전 모릅니다.");
+  }
+}
 ```

@@ -10,6 +10,10 @@
 <summary>자바스크립트 기본</summary>
 <div markdown="1">
 
+<details>
+<summary>변수와 상수</summary>
+<div markdown="1">
+
 ### 1. 변수와 상수
 
 값을 저장하는 **박스**와 같은 역할을 합니다.
@@ -18,10 +22,6 @@
 - 초기화 한다: 선언된 변수/상수에 저장할 초기값을 할당
 - 네이밍/명명: 변수/상수에 이름을 붙임
 - 같은 블록 범위에서 중복된 이름으로 다시 선언할 수 없음
-
-<details>
-<summary>변수와 상수</summary>
-<div markdown="1">
 
 #### 1) 변수
 
@@ -58,15 +58,13 @@ birth = "1997. 11. 21"; // 변경 불가능 오류
 </div>
 </details>
 
----
+<details>
+<summary>자료형(Type)</summary>
+<div markdown="1">
 
 ### 2. 자료형(Type)
 
 동일한 속성이나 특성을 가진 원소들의 집합
-
-<details>
-<summary>자료형(Type)</summary>
-<div markdown="1">
 
 #### 1) 원시타입 : 프로그래밍에 있어 기본적인 타입
 
@@ -126,15 +124,13 @@ console.log(empty); // undefined 출력
 </div>
 </details>
 
----
+<details>
+<summary>형 변환(Type Casting)</summary>
+<div markdown="1">
 
 ### 3. 형 변환(Type Casting)
 
 값의 타입을 다른 타입으로 변경
-
-<details>
-<summary>형 변환(Type Casting)</summary>
-<div markdown="1">
 
 #### 1) 묵시적 형 변환 (암묵적) : 자바스크립트 엔진이 알아서 형 변환
 
@@ -177,15 +173,13 @@ console.log(numToStr1 + "입니다."); // 20입니다.
 </div>
 </details>
 
----
+<details>
+<summary>연산자(Operator)</summary>
+<div markdown="1">
 
 ### 4. 연산자(Operator)란?
 
 - 프로그래밍에서의 다양한 연산을 위한 기호, 키워드
-
-<details>
-<summary>연산자(Operator)</summary>
-<div markdown="1">
 
 #### 1) 대입 연산자 : ex) let var1 = 1; 에서 =이 대입연산자
 
@@ -317,16 +311,14 @@ console.log(res); // 짝수
 </div>
 </details>
 
----
+<details>
+<summary>조건문(Conditional Statement)</summary>
+<div markdown="1">
 
 ### 5. 조건문(Conditional Statement)이란?
 
 특정 조건을 만족했을 때에만 실행되는 코드를 작성하기 위한 문법
 대표적으로 if, switch 조건문
-
-<details>
-<summary>조건문(Conditional Statement)</summary>
-<div markdown="1">
 
 #### 1) if
 
@@ -389,15 +381,13 @@ switch (
 </div>
 </details>
 
----
+<details>
+<summary>조건문(Conditional Statement)</summary>
+<div markdown="1">
 
 ### 6. 반복문(Loop, Iteration)이란?
 
 어떠한 동작을 반복해서 수행할 수 있도록 만들어 주는 문법
-
-<details>
-<summary>조건문(Conditional Statement)</summary>
-<div markdown="1">
 
 #### for문
 
@@ -439,15 +429,13 @@ for (let idx = 0; idx <= 10; idx++) {
 </div>
 </details>
 
----
+<details>
+<summary>함수</summary>
+<div markdown="1">
 
 ### 7. 함수
 
 공통으로 자주 사용되는 유사한 코드들을 묶어 이름을 붙이고 해당 기능이 필요 할 때 함수의 이름 만 불러서 간단하고 간결하게 기능을 가저다 쓸 수 있도록 하는 자바스크립트 문법
-
-<details>
-<summary>함수</summary>
-<div markdown="1">
 
 - 함수선언 : 함수를 새롭게 만드는 행위 선언했다고 실행되는게 아님
 - 함수호출 : 함수 실행
@@ -607,16 +595,14 @@ repeat(5, (idx) => {
 </div>
 </details>
 
----
+<details>
+<summary>스코프(scope)</summary>
+<div markdown="1">
 
 ### 8. 스코프(scope)란?
 
 - 우리말로 "범위"를 뜻함
 - 변수나 함수에 접근하거나 호풀할 수 있는 범위를 말함
-
-<details>
-<summary>스코프(scope)</summary>
-<div markdown="1">
 
 #### 1) 전역 스코프
 
@@ -689,7 +675,9 @@ funcD(); // 44 출력
 </div>
 </details>
 
----
+<details>
+<summary>배열(Array)</summary>
+<div markdown="1">
 
 ### 10. 배열(Array)란?
 
@@ -698,16 +686,7 @@ funcD(); // 44 출력
 - array, function, regexExp
 - 객체를 이용하면 현실세계에 존재하는 어떤 사물이나 개념을 표현하기 용이함
 
-<details>
-<summary>배열(Array)</summary>
-<div markdown="1">
-
 </div>
 </details>
 
----
-
-</div>
-</details>
-
----
+--

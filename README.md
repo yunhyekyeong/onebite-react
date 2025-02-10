@@ -659,7 +659,9 @@ funcD(); // 44 출력
 </div>
 </details>
 
----
+<details>
+<summary>객체(Object)</summary>
+<div markdown="1">
 
 ### 9. 객체(Object)란?
 
@@ -667,11 +669,6 @@ funcD(); // 44 출력
 - 여러가지 값을 동시에 저장할 수 있는 자료형을 의미
 - array, function, regexExp
 - 객체를 이용하면 현실세계에 존재하는 어떤 사물이나 개념을 표현하기 용이함
-
-<details>
-<summary>객체(Object)</summary>
-<div markdown="1">
-
 </div>
 </details>
 

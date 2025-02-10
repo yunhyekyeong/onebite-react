@@ -547,3 +547,60 @@ repeat(5, (idx) => {
   console.log(idx * 3); // 3 > 6 > 9 > 12 > 15 순서로 출력
 });
 ```
+
+### 8. 스코프(scope)란?
+
+- 우리말로 "범위"를 뜻함
+- 변수나 함수에 접근하거나 호풀할 수 있는 범위를 말함
+
+#### 1) 전역 스코프
+
+- 전체 영역에서 접근 가능
+
+```javascript
+let a = 1; // 전역
+
+function funcA() {
+  console.log(a);
+}
+
+funcA(); // 1 출력
+```
+
+#### 2) 지역 스코프
+
+- 특정 영역에서 만 접근 가능
+- 조건문, 반복문 안에서의 함수 선언식은 지역 스코프를 가지지 않음
+
+```javascript
+function funcA() {
+  let b = 2; // 지역
+
+  function funcB() {} // 함수 선언식 안에서 지역 스코프
+}
+
+console.log(b); // 스코프 외부 출력으로 오류 발생
+funcB(); // 스코프 외부 출력으로 오류 발생
+
+if (true) {
+  let c = 1;
+  function funcC() {
+    // 조건문 안에서 함수 선언식은 지역 스코프를 가지지 않음
+    console.log(33);
+  }
+}
+
+console.log(c); // 스코프 외부 출력으로 오류 발생
+funcC(); // 33 출력
+
+for (let i = 0; i < 10; i++) {
+  let d = 1;
+  function funcD() {
+    // 반복문 안에서 함수 선언식은 지역 스코프를 가지지 않음
+    console.log(44);
+  }
+}
+
+console.log(i); // 스코프 외부 출력으로 오류 발생
+funcD(); // 44 출력
+```

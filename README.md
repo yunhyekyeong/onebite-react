@@ -6,6 +6,10 @@
 
 ## 자바스크립트 기본
 
+<details>
+<summary>자바스크립트 기본</summary>
+<div markdown="1">
+
 ### 1. 변수와 상수
 
 값을 저장하는 **박스**와 같은 역할을 합니다.
@@ -63,6 +67,7 @@ birth = "1997. 11. 21"; // 변경 불가능 오류
 <details>
 <summary>자료형(Type)</summary>
 <div markdown="1">
+
 #### 1) 원시타입 : 프로그래밍에 있어 기본적인 타입
 
 ##### a. number
@@ -130,6 +135,7 @@ console.log(empty); // undefined 출력
 <details>
 <summary>형 변환(Type Casting)</summary>
 <div markdown="1">
+
 #### 1) 묵시적 형 변환 (암묵적) : 자바스크립트 엔진이 알아서 형 변환
 
 - 특정 하나의 변수의 값을 형변환 했을때 오류가 나지않고 연산이 잘 될 수 있는 경우에 만 묵시적 형 변환이 일어남
@@ -180,6 +186,7 @@ console.log(numToStr1 + "입니다."); // 20입니다.
 <details>
 <summary>연산자(Operator)</summary>
 <div markdown="1">
+
 #### 1) 대입 연산자 : ex) let var1 = 1; 에서 =이 대입연산자
 
 #### 2) 산술 연산자 : +, -, \*, /, %
@@ -608,8 +615,9 @@ repeat(5, (idx) => {
 - 변수나 함수에 접근하거나 호풀할 수 있는 범위를 말함
 
 <details>
-<summary>함수</summary>
+<summary>스코프(scope)</summary>
 <div markdown="1">
+
 #### 1) 전역 스코프
 
 - 전체 영역에서 접근 가능
@@ -673,3 +681,33 @@ funcD(); // 44 출력
 - 여러가지 값을 동시에 저장할 수 있는 자료형을 의미
 - array, function, regexExp
 - 객체를 이용하면 현실세계에 존재하는 어떤 사물이나 개념을 표현하기 용이함
+
+<details>
+<summary>객체(Object)</summary>
+<div markdown="1">
+
+</div>
+</details>
+
+---
+
+### 10. 배열(Array)란?
+
+- 원시 타입이 아닌 객체 타입의 자료형(DataType)
+- 여러가지 값을 동시에 저장할 수 있는 자료형을 의미
+- array, function, regexExp
+- 객체를 이용하면 현실세계에 존재하는 어떤 사물이나 개념을 표현하기 용이함
+
+<details>
+<summary>배열(Array)</summary>
+<div markdown="1">
+
+</div>
+</details>
+
+---
+
+</div>
+</details>
+
+---

@@ -6,10 +6,6 @@
 
 ## 자바스크립트 기본
 
-<details>
-<summary>자바스크립트 기본</summary>
-<div markdown="1">
-
 ### 1. 변수와 상수
 
 값을 저장하는 **박스**와 같은 역할을 합니다.
@@ -18,6 +14,10 @@
 - 초기화 한다: 선언된 변수/상수에 저장할 초기값을 할당
 - 네이밍/명명: 변수/상수에 이름을 붙임
 - 같은 블록 범위에서 중복된 이름으로 다시 선언할 수 없음
+
+<details>
+<summary>변수와 상수</summary>
+<div markdown="1">
 
 #### 1) 변수
 
@@ -51,11 +51,18 @@ birth = "1997. 11. 21"; // 변경 불가능 오류
 2. 숫자로 시작할 수 없다.
 3. 예약어(문법용어)를 사용할 수 없다.
 4. 협업을 위해 의미있는 단어의 조합으로 네이밍 짖기
+</div>
+</details>
+
+---
 
 ### 2. 자료형(Type)
 
 동일한 속성이나 특성을 가진 원소들의 집합
 
+<details>
+<summary>자료형(Type)</summary>
+<div markdown="1">
 #### 1) 원시타입 : 프로그래밍에 있어 기본적인 타입
 
 ##### a. number
@@ -111,6 +118,8 @@ console.log(empty); // undefined 출력
 - array
 - function
 - RegexExp
+</div>
+</details>
 
 ---
 
@@ -118,6 +127,9 @@ console.log(empty); // undefined 출력
 
 값의 타입을 다른 타입으로 변경
 
+<details>
+<summary>형 변환(Type Casting)</summary>
+<div markdown="1">
 #### 1) 묵시적 형 변환 (암묵적) : 자바스크립트 엔진이 알아서 형 변환
 
 - 특정 하나의 변수의 값을 형변환 했을때 오류가 나지않고 연산이 잘 될 수 있는 경우에 만 묵시적 형 변환이 일어남
@@ -156,10 +168,18 @@ let numToStr1 = String(str1);
 console.log(numToStr1 + "입니다."); // 20입니다.
 ```
 
+</div>
+</details>
+
+---
+
 ### 4. 연산자(Operator)란?
 
 - 프로그래밍에서의 다양한 연산을 위한 기호, 키워드
 
+<details>
+<summary>연산자(Operator)</summary>
+<div markdown="1">
 #### 1) 대입 연산자 : ex) let var1 = 1; 에서 =이 대입연산자
 
 #### 2) 산술 연산자 : +, -, \*, /, %
@@ -287,10 +307,19 @@ let res = var9 % 2 === 0 ? "짝수" : "홀수";
 console.log(res); // 짝수
 ```
 
+</div>
+</details>
+
+---
+
 ### 5. 조건문(Conditional Statement)이란?
 
 특정 조건을 만족했을 때에만 실행되는 코드를 작성하기 위한 문법
 대표적으로 if, switch 조건문
+
+<details>
+<summary>조건문(Conditional Statement)</summary>
+<div markdown="1">
 
 #### 1) if
 
@@ -350,9 +379,18 @@ switch (
 }
 ```
 
+</div>
+</details>
+
+---
+
 ### 6. 반복문(Loop, Iteration)이란?
 
 어떠한 동작을 반복해서 수행할 수 있도록 만들어 주는 문법
+
+<details>
+<summary>조건문(Conditional Statement)</summary>
+<div markdown="1">
 
 #### for문
 
@@ -391,9 +429,18 @@ for (let idx = 0; idx <= 10; idx++) {
 }
 ```
 
+</div>
+</details>
+
+---
+
 ### 7. 함수
 
 공통으로 자주 사용되는 유사한 코드들을 묶어 이름을 붙이고 해당 기능이 필요 할 때 함수의 이름 만 불러서 간단하고 간결하게 기능을 가저다 쓸 수 있도록 하는 자바스크립트 문법
+
+<details>
+<summary>함수</summary>
+<div markdown="1">
 
 - 함수선언 : 함수를 새롭게 만드는 행위 선언했다고 실행되는게 아님
 - 함수호출 : 함수 실행
@@ -550,11 +597,19 @@ repeat(5, (idx) => {
 });
 ```
 
+</div>
+</details>
+
+---
+
 ### 8. 스코프(scope)란?
 
 - 우리말로 "범위"를 뜻함
 - 변수나 함수에 접근하거나 호풀할 수 있는 범위를 말함
 
+<details>
+<summary>함수</summary>
+<div markdown="1">
 #### 1) 전역 스코프
 
 - 전체 영역에서 접근 가능
@@ -607,11 +662,14 @@ console.log(i); // 스코프 외부 출력으로 오류 발생
 funcD(); // 44 출력
 ```
 
+</div>
+</details>
+
+---
+
 ### 9. 객체(Object)란?
 
 - 원시 타입이 아닌 객체 타입의 자료형(DataType)
 - 여러가지 값을 동시에 저장할 수 있는 자료형을 의미
 - array, function, regexExp
 - 객체를 이용하면 현실세계에 존재하는 어떤 사물이나 개념을 표현하기 용이함
-</div>
-</details>

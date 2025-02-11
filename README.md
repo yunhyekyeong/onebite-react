@@ -422,14 +422,14 @@ switch (
 </details>
 
 <details>
-<summary>조건문(Conditional Statement)</summary>
+<summary>반복문(Loop, Iteration)</summary>
 <div markdown="1">
 
 ### 6. 반복문(Loop, Iteration)이란?
 
 어떠한 동작을 반복해서 수행할 수 있도록 만들어 주는 문법
 
-#### for문
+#### 1) for문
 
 - 초기식 : for문 내부에서 사용하는 특별한 변수(반복이 몇번 카운트 -> 카운트변수 라고 부름)를 초기화
 - 조건식 : 반복문이 언제까지 반복할 것인지 참일 때만 반복, 거짓일 때 반복 멈춤
@@ -544,7 +544,7 @@ function getAear(width, height) {
 }
 ```
 
-#### 화살표 함수
+#### 1) 화살표 함수
 
 ```javascript
 let varC = () => {
@@ -563,7 +563,7 @@ let varE = (value) => {
 console.log(varE(10)); // 11
 ```
 
-#### 콜백함수
+#### 2) 콜백함수
 
 - 자신이 아닌 다른 함수에 인수로써 전달된 함수를 의미
 - 콜백함수는 main 함수애서 원하는 타이밍에 실행 가능

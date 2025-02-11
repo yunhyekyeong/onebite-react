@@ -669,6 +669,129 @@ funcD(); // 44 출력
 - 여러가지 값을 동시에 저장할 수 있는 자료형을 의미
 - array, function, regexExp
 - 객체를 이용하면 현실세계에 존재하는 어떤 사물이나 개념을 표현하기 용이함
+
+#### 1) 객체 생성
+
+```javascript
+let obj1 = new Object(); // 내장함수 객체 생성자
+let obj2 = {}; // 객체 리터럴 > 간결하기 때문에 대부분 객체 생성
+```
+
+#### 2) 객체 프로퍼티
+
+```javascript
+let person = {
+  name: "이정환", // 객체의 정보값을 객체 프로퍼티(property) = 객체 속성 이라고 부름
+  age: 27, // 프로퍼티는 key: value로 구성
+  hobby: "테니스",
+  job: "FE Developer",
+  extra: {},
+  10: 20, // 숫자 값도 키로 사용 가능
+  "like a cat": 20, //띄어쓰기가 포함된 키는 문자열 변환
+};
+```
+
+#### 3) 객체 프로퍼티를 다루는 방법
+
+##### a. 특정 프로퍼티에 접근
+
+```javascript
+// - (점 표기법)
+
+let name = person.name;
+console.log(name); // 이정환
+
+let name2 = person.name2;
+console.log(name); // 존재하지 않는 프로퍼티 접근하면 undefind 출력
+
+// - (괄호 표기법) 동적으로 프로퍼티를 변화시키면서 가저와야 할 때 사용
+
+let age = person["age"]; // 문자열로 명시
+console.log(age); // 27
+
+let property = "hobby";
+let hobby = person[property];
+console.log(hobby); // 테니스
+```
+
+##### b. 새로운 프로퍼티 추가
+
+```javascript
+person.job = "fe developer";
+person["favoriteFood"] = "떡볶이";
+
+console.log(person); // favoriteFood: 떡볶이 추가되어 나옴
+```
+
+##### c. 프로퍼티 수정
+
+```javascript
+person.job = "educator";
+person["favoriteFood"] = "초콜릿";
+
+console.log(person); // job: educator, favoriteFood: 초콜릿 변경되어 나옴
+```
+
+##### b. 프로퍼티 삭제
+
+```javascript
+delete person.job;
+console.log(person); // job 삭제하고 나옴
+```
+
+##### e. 프로퍼티의 존재 유무를 확인
+
+```javascript
+// - (in 연산자)
+let result1 = "name" in person; // name 키가 person에 들어있나?
+let result2 = "cat" in person; // cat 키가 person에 들어있나?
+console.log(result1); // true
+console.log(result2); // false
+```
+
+##### f. 상수 객체
+
+- 상수는 기본적으로 새로운 값을 할당하지 못하지만 저장된 객체 프로퍼티를 수정하는건 괜찮음
+
+```javascript
+const animal = {
+  type: "고양이",
+  name: "나비",
+  color: "black",
+};
+
+animal.age = 2; // 추가
+animal.name = "까망이"; // 수정
+delete animal.color; // 삭제
+
+console.log(animal); // age: 2(추가), name: "까망이"(수정), type: "고양이", color 삭제
+
+animal = 123; // 불가
+```
+
+##### g. 메서드
+
+- 객체 프로퍼티 중 값이 함수인 프로퍼티
+
+```javascript
+const person = {
+  name: "이정현",
+  sayHi: function () {
+    console.log("안녕");
+  },
+  sayHi: () => {
+    console.log("안녕");
+  },
+  // 메서드 선언
+  sayHi() {
+    console.log("안녕");
+  }, // 함수 프로퍼티로 동작 정의
+};
+
+person.sayHi(); // 안녕
+person["sayHi"]();
+```
+
 </div>
 </details>
 
@@ -678,12 +801,28 @@ funcD(); // 44 출력
 
 ### 10. 배열(Array)란?
 
-- 원시 타입이 아닌 객체 타입의 자료형(DataType)
-- 여러가지 값을 동시에 저장할 수 있는 자료형을 의미
-- array, function, regexExp
-- 객체를 이용하면 현실세계에 존재하는 어떤 사물이나 개념을 표현하기 용이함
+- 여러개의 값을 순차적으로 담을 수 있는 자료 형
+
+##### a. 배열 생성
+
+```javascript
+let arrA = new Array(); // 배열 생성자
+let arrB = []; // 배열 리터럴 (자주 사용)
+
+let arrC = [1, 2, 3, 4, true, "hello", null, undefined, () => {}, {}, []];
+```
+
+##### b. 배열 요소 접근
+
+```javascript
+let item1 = arrC[0]; // 인덱스 사용
+let item2 = arrC[1];
+arrC[0] = "hello";
+
+console.log(arrC); //인덱스 0에 "hello"로 변경
+```
 
 </div>
 </details>
 
---
+---

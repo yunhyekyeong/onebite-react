@@ -9,12 +9,10 @@
 <details>
 <summary>자바스크립트 심화</summary>
 <div markdown="1">
-<details>
 
 <details>
 <summary>Truthy & Falsy</summary>
 <div markdown="1">
-<details>
 
 ### 1. Truthy & Falsy
 
@@ -86,8 +84,7 @@ function printName2(person) {
 <details>
 <summary>단락평가(short-circuit Evaluation)</summary>
 <div markdown="1">
-<details>
- 
+
 ### 2. 단락평가(short-circuit Evaluation)란?
 
 - and 나 or 같은 논리연산식에서 해당 연산의 결과를 확정 할 수 있다면 두번째 피연산자에는 접근하지 않는 자바스크립트의 특징

@@ -11,30 +11,129 @@
 <div markdown="1">
 <details>
 
-<summary>변수와 상수</summary>
+<summary>Truthy & Falsy</summary>
 <div markdown="1">
 <details>
 
-### 1. 변수와 상수
+### 1. Truthy & Falsy
 
-값을 저장하는 **박스**와 같은 역할을 합니다.
+- 참이나 거짓을 의미하지 않는 값도, 조건문 내에서 참이나 거짓으로 평가하는 특징
 
-- 선언한다: 변수/상수를 만들 때 이름을 붙이고 값을 정함
-- 초기화 한다: 선언된 변수/상수에 저장할 초기값을 할당
-- 네이밍/명명: 변수/상수에 이름을 붙임
-- 같은 블록 범위에서 중복된 이름으로 다시 선언할 수 없음
+#### 1) Falsy한 값
 
-#### 1) 변수
-
-- 변수는 언제든지 값의 변경이 가능
-- 값이 변경 가능하기 때문에 초기값을 설정하지 않아도 됨
-- 초기값을 설정하지 않으면 값이 없다는 의미인 undefined가 출력
+- undefined
+- null
+- 0
+- -0
+- NaN
+- ""
+- 0n
 
 ```javascript
-let age = 27; // age로 변수 선언하고 27값을 주어 초기화
-let age; // undefined로 출력, 중복이름 선언 불가
+let f1 = undefined;
+let f2 = null;
+let f3 = 0;
+let f4 = -0;
+let f5 = NaN;
+let f6 = "";
+let f7 = 0n;
+```
 
-age = 30; // 변수 값 변경
+#### 2) Truthy한 값
+
+- 7가지 falsy한 값 제외하고 나머지 모든 값
+
+- 문자열 "hello"
+- 숫자 123
+- 배열 []
+- 객체 {}
+- 함수 () => {}
+
+```javascript
+let t1 = "hello";
+let t2 = 123;
+let t3 = [];
+let t4 = {};
+let t5 = () => {};
+```
+
+#### 활용
+
+```javascript
+function printName(person) {
+  console.log(person.name);
+}
+
+let person; // undefined
+printName(person); // type 에러 undefined으로 부터 프로퍼티 읽을 수 없다
+
+person = null;
+
+function printName2(person) {
+  if (person === undefined) {
+    // || person === null 로 조건 추가해야함 > 너무 복잡하기 때문에  not 연산자 사용 !person
+    console.log("person의 값이 없음");
+    return; // return 조건에 맞으면 아래 함수로 접근하지 못하도록 종료
+  }
+  console.log(person.name); // 매개변수가 null일때 false가 되어 콘솔 실행
+}
+```
+
+</div>
+</details>
+
+<summary>단락평가(short-circuit Evaluation)</summary>
+<div markdown="1">
+<details>
+ 
+### 2. 단락평가(short-circuit Evaluation)란?
+
+- and 나 or 같은 논리연산식에서 해당 연산의 결과를 확정 할 수 있다면 두번째 피연산자에는 접근하지 않는 자바스크립트의 특징
+- 단락평가를 이용하면 조건문을 사용하지 않고도 특정 상황에서 함수를 호출하지 않도록 방지하거나 어떤 값들을 굳이 계산하지 않도록 제한하는 등 다양한 기능 개발 가능함
+
+```javascript
+function returnFalse() {
+  console.log("False 함수");
+  return false; // falsy한 값
+}
+
+function returnTrue() {
+  console.log("True 함수");
+  return true;
+}
+
+console.log(returnFalse() && returnTrue()); // "False 함수", false 출력
+// -> and는 모두 true일때 true를 출력하고 하나라도 false라면 false를 출력 하게 되기 때문에
+// 첫번째 연산자가 false이면 다음 연산자 결과가 뭔든 false를 출력하기 때문에 다음 연산자에 접근 하지 않음 > 단락평가 작동
+
+console.log(returnTrue() || returnFalse()); // "True 함수", true 출력
+// -> or은 둘중 하나가 true일때 true를 출력하고 둘다 false라면 false를 출력 하게 되기 때문에
+// 첫번째 연산자가 Ture이면 다음 연산자 결과가 뭔든 Ture를 출력하기 때문에 다음 연산자에 접근 하지 않음 > 단락평가 작동
+```
+
+#### 단락 평가 활용 사례
+
+```javascript
+function printName(person) {
+  // if (!person) {
+  //   console.log("person에 값이 없음");
+  //   return;
+  // }
+  // console.log(person.name);
+
+  // => 단략 평가를 활용하여 축약됨
+  console.log(person && person.name);
+}
+
+printName(); // person이 undefined falsy한 값이기 때문에 person.name까지 접근 안함
+
+function printName2(person) {
+  const name = person && person.name;
+  console.log(name || "person의 값이 없음");
+}
+
+printName2(); // undefined이 전달되서 and 연산자에서 name이 undefined truthy한 문자열 "person의 값이 없음" 출력
+printName2({ name: "이정현" }); // and 연산자에서 truthy person.name값이 name 변수에 저장되고 or 연산자에서 name 변수가 truthy한 값이라 이정환 출력
 ```
 
 </div>

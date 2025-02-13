@@ -11,6 +11,7 @@
 <div markdown="1">
 <details>
 
+<details>
 <summary>Truthy & Falsy</summary>
 <div markdown="1">
 <details>
@@ -82,6 +83,7 @@ function printName2(person) {
 </div>
 </details>
 
+<details>
 <summary>단락평가(short-circuit Evaluation)</summary>
 <div markdown="1">
 <details>

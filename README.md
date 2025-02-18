@@ -291,6 +291,92 @@ JSON.stringify(o1) === JSON.stringify(o2); // -> 깊은 비교
 </div>
 </details>
 
+<details>
+<summary>반복문으로 배열과 객체 순회하기</summary>
+<div markdown="1">
+
+### 5. 반복문으로 배열과 객체 순회하기
+
+#### 순회(lteration)이란?
+
+- 배열, 객체에 저장된 여러개의 값에 순서대로 하나씩 접근하는 것을 말함
+
+#### 1) 배열 순회
+
+##### a. 배열 인덱스
+
+```javascript
+let arr = [1, 2, 3];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+let arr2 = [4, 5, 6, 7, 8];
+
+for (let i = 0; i < arr2.length; i++) {
+  console.log(arr2[i]);
+}
+```
+
+##### b. for of 반복문
+
+```javascript
+let arr = [1, 2, 3];
+
+for (let item of arr) {
+  console.log(item);
+}
+```
+
+#### 2) 객체 순회
+
+##### a. Object.keys
+
+- 객체에서 key 값들만 뽑아서 새로운 배열로 반환
+
+```javascript
+let saram = {
+  name: "이정환",
+  age: 27,
+  hobby: "테니스",
+};
+
+let keys = Object.keys(person);
+
+for (let i = 0; i < keys.length; i++) {
+  console.log(keys[i]);
+}
+
+for (let key of keys) {
+  console.log(key, saram[key]);
+
+  const value = saram[key];
+  console.log(key, value);
+}
+```
+
+##### b. Object.values
+
+- 객체에서 value 값들만 뽑아서 새로운 배열로 반환
+
+```javascript
+let values = Object.values(saram);
+
+for (let value of values) {
+  console.log(value);
+}
+
+// 2.3 for in
+for (let key in saram) {
+  const value = saram[key];
+  console.log(key, value);
+}
+```
+
+</div>
+</details>
+
 </div>
 </details>
 
